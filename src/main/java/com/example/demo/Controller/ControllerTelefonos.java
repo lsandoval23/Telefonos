@@ -17,6 +17,9 @@ import java.util.List;
 import java.util.Optional;
 
 
+// La anotacion RestController interactua con la base de datos, y devuelve datos en formato json
+// a quien haga la consulta.
+
 @RestController
 public class ControllerTelefonos {
 

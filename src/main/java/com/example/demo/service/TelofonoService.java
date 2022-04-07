@@ -12,9 +12,12 @@ import java.util.Optional;
 @Service
 public class TelofonoService implements ITelefonoService {
 
+    /** Atributos */
     @Autowired
     private ITelefonos data;
 
+
+    /** Metodos */
     @Override
     public List<Telefonos> listar() {
         return (List<Telefonos>) data.findAll();
