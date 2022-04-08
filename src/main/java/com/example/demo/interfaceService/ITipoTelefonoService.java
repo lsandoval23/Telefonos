@@ -8,5 +8,5 @@ public interface ITipoTelefonoService {
 
     public List<TipoTelefono> listarTipoTelefonos();
     public int save(TipoTelefono tipoTelefono);
-    public void delete(TipoTelefono tipoTelefono);
+    public void delete(int idTipoTelefono);
 }

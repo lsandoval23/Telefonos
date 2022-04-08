@@ -13,15 +13,19 @@ import java.util.List;
 public class TipoTelefonoService implements ITipoTelefonoService {
 
     /** Atributos */
+    // Crud
     @Autowired
     private ITipoTelefono data;
 
     /** Metodos */
+
+    // Lista todos los tipos de telefono
     @Override
     public List<TipoTelefono> listarTipoTelefonos() {
         return (List<TipoTelefono>) data.findAll();
     }
 
+    // Guarda un nuevo tipo de telefono
     @Override
     public int save(TipoTelefono t) {
         int res = 0;
@@ -32,8 +36,9 @@ public class TipoTelefonoService implements ITipoTelefonoService {
         return res;
     }
 
+    // Elimina un tipo de telefono
     @Override
-    public void delete(TipoTelefono tipoTelefono) {
-
+    public void delete(int id) {
+        data.deleteById(id);
     }
 }

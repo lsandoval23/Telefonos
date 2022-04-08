@@ -4,10 +4,7 @@ import com.example.demo.modelo.Telefonos;
 import com.example.demo.modelo.TipoTelefono;
 import com.example.demo.service.TipoTelefonoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,7 +35,16 @@ public class ControllerTipoTelefono {
         } catch (Exception e) {
             return "{\"error\":1,\"messenger\":\"" + e.getMessage()  +"\"}";
         }
+    }
 
+    @PutMapping("/eliminar_tipo/{id}")
+    public String eliminar(@PathVariable int id) {
+        try {
+            service.delete(id);
+            return "{\"error\":0,\"messenger\":\"Eliminado con éxito\"}";
+        } catch (Exception e) {
+            return "{\"error\":1,\"messenger\":\"" + e.getMessage()  +"\"}";
+        }
     }
 
 }
