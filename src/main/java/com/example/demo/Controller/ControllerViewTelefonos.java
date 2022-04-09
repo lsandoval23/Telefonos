@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,5 +17,11 @@ public class ControllerViewTelefonos {
     	 model.addAttribute("titulo", "Prueba");
     	 return "telefonos";
     }
+
+	@GetMapping("/vista_tipo_telefono")
+	public String indextipo(Model model){
+		model.addAttribute("titulo2", "Prueba2");
+		return "tipo_telefono";
+	}
 
 }

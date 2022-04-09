@@ -1,0 +1,60 @@
+<html ng-app="myApp" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    
+	<link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet" th:href="@{css/bootstrap.min.css}"  />
+    <link th:href="@{css/custom.css}" rel="stylesheet" />
+	<link th:href="@{css/sweetalert2.min.css}" rel="stylesheet" />
+	
+	
+</head>
+<body ng-controller="Secundario">
+    <div style="background-color: white" class="row">
+        <div class="col-md-12">
+
+
+            <h1>DATOS DEL CLIENTE</h1>
+            <table>
+                <tr>
+
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-lg-1">
+                    <label>Nombre</label>
+                    <div>{{Persona.nombre}}</div>
+                </div>
+            </div>
+            <hr >
+            <span>TIPOS DE TELEFONO</span>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th width="3%">Posicion</th>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th width="3%">&nbsp;</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script data-require="angular-ui@0.4.0" data-semver="0.4.0" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/Controller_TipoTelefonos.js"></script>
+
+
+
+</body>
+</html>
